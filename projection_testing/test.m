@@ -3,14 +3,14 @@
 
 focal_length_mm = 30;
 pixel_pitch = 1024/36; % pixels per mm
-focal_length_pixels =focal_length_mm*pixel_pitch;
-centre_pixel = [512,512]; % centre pixel in pixels
+focal_length_pixels =293.2;%focal_length_mm*pixel_pitch;
+centre_pixel = [640,480]; % centre pixel in pixels
 
 object_points = readmatrix("object_points.xlsx");
 camera_intrinsic = [focal_length_pixels, 0 , centre_pixel(1); ...
                     0, focal_length_pixels ,  centre_pixel(2); ...
                     0 , 0,                      1]; %readmatrix("camera_details.xlsx",)
-lab_setup_table = readtable("test_out_excel30.csv")
+lab_setup_table = readtable("actual_lab_setup.csv")
 
 
 
