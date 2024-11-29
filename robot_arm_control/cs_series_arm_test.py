@@ -1,11 +1,16 @@
-import robot
+from robot import Robot
+
 #from robot import Robot
+#help(robot)
+
+
 warehouse_bot = Robot("192.168.0.1")
 
 
 # Connect to the robot
 connection, message = warehouse_bot.connect()
 print(message)
+
 
 '''
 if connection:

@@ -8,6 +8,7 @@ src/elite_ec_sdk.egg-info/dependency_links.txt
 src/elite_ec_sdk.egg-info/entry_points.txt
 src/elite_ec_sdk.egg-info/requires.txt
 src/elite_ec_sdk.egg-info/top_level.txt
+src/robot/Logo.py
 src/robot/SDK.py
 src/robot/__init__.py
 src/robot/__main__.py

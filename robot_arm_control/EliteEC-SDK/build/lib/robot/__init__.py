@@ -7,7 +7,7 @@ except ModuleNotFoundError:
 __version__ = "0.0.2"
 __all__ = ["Logo", "SDK"]
 
-#from .Logo import Logo
+from .logo import Logo
 from .SDK import Robot
 
 _cfg = tomllib.loads(resources.read_text("robot", "config.toml"))
