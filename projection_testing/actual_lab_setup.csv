@@ -1,7 +1,7 @@
-name,x1,x2,x3,w1,w2,w3,w4,eX,eY,eZ,order
+name,x1 (mm),x2,x3,w1,w2,w3,w4,eX (deg),eY,eZ,order
 effector2,,,,,,,,,,,
-arm2,,,,,,,,,,,
-arm1,,,,,,,,,,,
-effector1,,,,,,,,,,,
+arm2 to effector2,0.3,-154.2,523.2,,,,,-90.11,43.59,-177.17,
+arm1 to arm 2,,,,,,,,,,,
+arm1 to effector1,638.05,45.25,521.63,,,,,-88.67,7.391,-134.769,
 camera,,,,,,,,,,,
 Camera,,,,,,,,,,,

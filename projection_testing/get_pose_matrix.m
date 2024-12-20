@@ -1,14 +1,31 @@
-function [pose] = get_pose_matrix(translations,euler_angles)
+function [pose,str] = get_pose_matrix(translations,euler_angles,direction)
 %GET_POSE_MATRIX Summary of this function goes here
 %   Detailed explanation goes here
 
-pose =  zeros(4);
-%pose(1:3,1:3) = angle2dcm(euler_angles(1),euler_angles(2),euler_angles(3),'XYZ');
-pose(1:3,1:3)  = inv(quat2rotm(euler_angles));
-pose(1:3,4) = -1*translations;
-pose(4,4) = 1;
+if direction == -1
+   
+    pose =  eye(4);
+    %pose(1:3,1:3) = angle2dcm(euler_angles(1),euler_angles(2),euler_angles(3),'XYZ');
+    pose(1:3,1:3)  = inv(quat2rotm(euler_angles));
+    pose(1:3,4) = -translations;
 
+    str = "";
+   
+elseif direction ==1
+    pose =  eye(4);
+    %pose(1:3,1:3) = angle2dcm(euler_angles(1),euler_angles(2),euler_angles(3),'XYZ');
+    pose(1:3,1:3)  =quat2rotm(euler_angles);
+    pose(1:3,4) = translations;
 
+    str = "";
 
+else
+    str= "warning invalid direction, defaulting to positive direction";
+    disp(str)
+    pose =  eye(4);
+    %pose(1:3,1:3) = angle2dcm(euler_angles(1),euler_angles(2),euler_angles(3),'XYZ');
+    pose(1:3,1:3)  =quat2rotm(euler_angles);
+    pose(1:3,4) = translations;
+   
 end
 
